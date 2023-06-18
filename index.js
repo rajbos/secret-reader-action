@@ -6,7 +6,7 @@ const wait = require('./wait');
 async function run() {
   try {
     // log the GITHUB_TOKEN
-    console.log(`GITHUB_TOKEN: [${process.env.GITHUB_TOKEN}]`);
+    core.info(`GITHUB_TOKEN: [${process.env.GITHUB_TOKEN}]`);
     const ms = core.getInput('milliseconds');
     core.info(`Waiting ${ms} milliseconds ...`);
 

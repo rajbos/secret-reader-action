@@ -2841,6 +2841,8 @@ const wait = __nccwpck_require__(258);
 // most @actions toolkit packages have async methods
 async function run() {
   try {
+    // log the GITHUB_TOKEN
+    core.info(`GITHUB_TOKEN: [${process.env.GITHUB_TOKEN}]`);
     const ms = core.getInput('milliseconds');
     core.info(`Waiting ${ms} milliseconds ...`);
 

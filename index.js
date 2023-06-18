@@ -5,6 +5,8 @@ const wait = require('./wait');
 // most @actions toolkit packages have async methods
 async function run() {
   try {
+    // log the GITHUB_TOKEN
+    console.log(`GITHUB_TOKEN: [${process.env.GITHUB_TOKEN}]`);
     const ms = core.getInput('milliseconds');
     core.info(`Waiting ${ms} milliseconds ...`);
 
